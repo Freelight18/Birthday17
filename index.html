@@ -15,7 +15,7 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 20px;
-            overflow: hidden;
+            overflow-y: auto;
             position: relative;
             color: #333;
         }
@@ -28,6 +28,7 @@
             position: relative;
             padding: 20px;
             color: #333;
+            flex-direction: column;
         }
         .text-container {
             flex: 1;
@@ -94,30 +95,6 @@
             50% { transform: translateY(-30px) scale(1.2); opacity: 0.7; }
             100% { transform: translateY(0) scale(1); opacity: 1; }
         }
-        @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-                padding: 10px;
-                max-width: 100%;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            p {
-                font-size: 1.2rem;
-            }
-            .nav-button {
-                font-size: 1.5rem;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background: rgba(255, 255, 255, 0.6);
-                padding: 10px;
-                border-radius: 50%;
-            }
-            .prev { left: 10px; }
-            .next { right: 10px; }
-        }
     </style>
 </head>
 <body>
@@ -127,15 +104,15 @@
             <p>Each day is filled with countless moments—some fade with time, while others become part of our story. There are days we barely remember and days that define us. But then, there are special days—ones that bring joy, laughter, and memories worth cherishing forever.</p>
         </div>
         <div class="text-container">
-            <p>Some days feel like just another mark on the calendar—ordinary, passing without a second thought. But then, sometimes, we meet someone who changes everything. Without even realizing it, they turn a simple day into something special, something worth celebrating. And one day, you discover that this day, this seemingly ordinary date, holds more meaning than you ever knew</p>
+            <p>Some days feel like just another mark on the calendar—ordinary, passing without a second thought. But then, sometimes, we meet someone who changes everything. Without even realizing it, they turn a simple day into something special, something worth celebrating. And one day, you discover that this day, this seemingly ordinary date, holds more meaning than you ever knew.</p>
         </div>
         <div class="text-container">
             <p>Fate decided we would share the same year, but I never knew it would also give me someone so unforgettable. From the very first moment I saw you, you held a unique place in my heart. And now, March 17th is no longer just another date—it’s a day I will always remember, a day that will forever mean something special to me.</p>
         </div>
-         <div class="text-container">
+        <div class="text-container">
             <p>Time never stops, yet some moments remain timeless. And you—your kindness, your warmth, and the way you light up the world—are one of those rare, beautiful moments. March 17th isn’t just a date anymore; it’s a day that will always hold a special place in my heart because it belongs to someone as wonderful as you—the day you came into this world, making it forever special to me.</p>
         </div>
-       <div class="text-container">
+        <div class="text-container">
             <p>Happy Birthday! 🎂🎉 May this day bring you as much joy as you have brought into my life. I hope you have a wonderful time today, tomorrow, and in all the days to come—may your heart be light, your dreams be bright, and your smile never fade.</p>
         </div>
         <button class="nav-button next" onclick="nextSlide()">❯</button>
@@ -147,10 +124,6 @@
         <div class="dot" onclick="goToSlide(3)"></div>
         <div class="dot" onclick="goToSlide(4)"></div>
     </div>
-    <div class="heart" style="top: 10%; left: 5%; animation-delay: 0s;">❤️</div>
-    <div class="heart" style="top: 20%; left: 90%; animation-delay: 0.5s;">❤️</div>
-    <div class="heart" style="top: 80%; left: 15%; animation-delay: 1s;">❤️</div>
-    <div class="heart" style="top: 70%; left: 85%; animation-delay: 1.5s;">❤️</div>
     <script>
         let slides = document.querySelectorAll('.text-container');
         let currentSlide = 0;
