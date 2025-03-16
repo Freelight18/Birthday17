@@ -117,24 +117,14 @@
         </div>
         <button class="nav-button next" onclick="nextSlide()">❯</button>
     </div>
-    <div class="slide-nav">
-        <div class="dot active" onclick="goToSlide(0)"></div>
-        <div class="dot" onclick="goToSlide(1)"></div>
-        <div class="dot" onclick="goToSlide(2)"></div>
-        <div class="dot" onclick="goToSlide(3)"></div>
-        <div class="dot" onclick="goToSlide(4)"></div>
-    </div>
     <script>
         let slides = document.querySelectorAll('.text-container');
         let currentSlide = 0;
-        const dots = document.querySelectorAll('.slide-nav .dot');
         function updateSlide(index) {
             slides.forEach((slide, i) => {
                 slide.classList.remove('active');
-                dots[i].classList.remove('active');
             });
             slides[index].classList.add('active');
-            dots[index].classList.add('active');
             currentSlide = index;
         }
         function nextSlide() {
@@ -142,9 +132,6 @@
         }
         function prevSlide() {
             if (currentSlide > 0) updateSlide(currentSlide - 1);
-        }
-        function goToSlide(index) {
-            updateSlide(index);
         }
     </script>
 </body>
